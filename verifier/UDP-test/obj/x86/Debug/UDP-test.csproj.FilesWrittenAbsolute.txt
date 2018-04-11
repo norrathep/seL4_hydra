@@ -1,0 +1,5 @@
+/home/oak/workspace/UDP-test/UDP-test/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/oak/workspace/UDP-test/UDP-test/bin/Debug/UDP-test.exe.mdb
+/home/oak/workspace/UDP-test/UDP-test/bin/Debug/UDP-test.exe
+/home/oak/workspace/UDP-test/UDP-test/obj/x86/Debug/UDP-test.exe
+/home/oak/workspace/UDP-test/UDP-test/obj/x86/Debug/UDP-test.exe.mdb

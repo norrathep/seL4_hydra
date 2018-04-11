@@ -1,0 +1,1 @@
+0000000000000000000000000000000000000000 b2ce4c3eb155d24007ea60ad3939af492bfa41ec sel4 <sel4@sel4-VirtualBox.(none)> 1439527497 -0400	fetch --progress seL4 --tags +refs/heads/*:refs/remotes/seL4/* +refs/heads/sel4:refs/remotes/seL4/sel4: storing head

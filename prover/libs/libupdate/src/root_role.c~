@@ -1,0 +1,12 @@
+#include <root_role.h>
+
+int find_key(Root_t root, uint32_t key_id, Key_t *k) {
+    int i;
+    for(i=0; i<NUM_ROOT_KEYS; i++) {
+        if(root.keys[i].key_id == key_id) {
+            *k = root.keys[i];
+            return 1;
+        }
+    }
+    return 0;
+}

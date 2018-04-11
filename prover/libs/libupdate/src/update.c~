@@ -1,0 +1,87 @@
+#include <update.h>
+
+void print_update_request(update_req_t r) {
+    int i;
+    
+    printf("=============================================================\n");
+    printf("Size of update request: %d bytes\n", sizeof(update_req_t));
+    // print mac
+    printf("MAC: ");
+    for(i=0; i<32; i++) printf("%02x ", r.mac[i]);
+    printf("\n");
+
+    printf("Sig: ");
+    for(i=0; i<64; i++) printf("%02x ", r.signature[i]);
+    printf("\n");
+
+    printf("Public Key: ");
+    for(i=0; i<32; i++) printf("%02x ", r.public_key[i]);
+    printf("\n");
+
+    printf("Hash: ");
+    for(i=0; i<64; i++) printf("%02x ", r.hash[i]);
+    printf("\n");
+
+    printf("Version: %d - File Size: %d bytes - Process ID %d\n", r.version, r.file_size, r.process_id);
+    printf("start_disk_addr: %d, start_cpio_addr: %d\n", r.start_disk_addr, r.start_cpio_addr);
+    printf("=============================================================\n");
+}
+
+int verify_sig(Signature_t sig, Key_t key, const unsigned char* data, size_t len) {
+    return 1;
+    if(sig.key_id != key.key_id || sig.type != key.type) return 0;
+    if(data == NULL && len != 0) return 0;
+
+    uint64_t unused;
+    switch(sig.type) {
+        case ED25519:
+            return ed25519_verify(sig.sig, data, len, key.public_key, &unused);
+        default:
+            printf("Signature scheme %d is not supported\n", sig.type);
+            return 0;   
+    } 
+    return 0;   
+}
+
+int verify_sig_with_threshold(Root_t root, Snapshot_t sh, int threshold) {
+
+    void *data = (void*)(&sh.role_type);
+    int data_len = sizeof(Snapshot_t) - sizeof(Signature_t)*NUM_SNAPSHOT_KEYS;
+    int correct = 0;
+    int i;
+    for(i=0; i<NUM_SNAPSHOT_KEYS; i++) {
+
+        Key_t key;
+        int key_exist = find_key(root, sh.signature[i].key_id, &key);
+        if(key_exist && verify_sig(sh.signature[i], key, data, data_len)) correct++;
+    }
+    return 1 ? correct > thresh : 0;
+}
+
+
+RootRequest_t* generate_default_root_role() {
+    RootRequest_t *root = malloc(sizeof(RootRequest_t));
+    root->role_type = ROOT;
+    root->timestamp = 123451;
+    root->version = 1;
+    int i;
+    for(i=0; i<NUM_ROOT_KEYS; i++) {
+        root->keys[i].key_id = i;
+        root->keys[i].type = ED25519;
+
+        uint8_t public_key[32] = {0}, private_key[32] = {0};
+    
+        ed25519_create_keypair(public_key, private_key, (uint8_t*)(&i));
+        memcpy(root->keys[i].public_key, public_key, 32);
+
+        printf("Key id: %d\nPK: ", i);
+        int j;
+        for(j=0; j<32; j++) printf("%02x ", root->keys[i].public_key[j]);
+        printf("\nSK: ");
+        for(j=0; j<32; j++) printf("%02x ", private_key[j]);
+        printf("\n");
+    }
+
+    printf("Root generated\n");
+}
+

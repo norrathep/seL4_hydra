@@ -1,0 +1,66 @@
+#ifndef _METADATA_H_
+#define _METADATA_H_
+
+#include <limits.h>
+
+#define MAX_NAME_SIZE 16
+#define NUM_TARGETS 2
+#define NUM_ROOT_KEYS 4
+
+#define NUM_ROLES 4
+
+#define NUM_TARGETS_SIGS 1
+#define NUM_SNAPSHOT_SIGS 1
+#define NUM_TIMESTAMP_SIGS 1
+
+#define NUM_TIMESTAMP_HASHES 1
+#define NUM_TARGETS_HASHES 1
+
+enum Keytype {ED25519, Internal_ForceKeytypeIntSize = INT_MAX};
+enum RoleType {ROOT, SNAPSHOT, TARGET, TIMESTAMP, Internal_ForceRoletypeIntSize = INT_MAX};
+enum HashType {SHA256, Internal_ForceHashtypeIntSize = INT_MAX};
+
+#pragma pack(push, 1)
+
+typedef struct FullKey {
+    uint32_t key_id;
+    enum Keytype type;
+    uint8_t public_key[32];
+    uint8_t private_key[32];
+} FullKey_t;
+
+typedef struct Key {
+    uint32_t key_id;
+    enum Keytype type;
+    uint8_t public_key[32];
+} Key_t;
+
+// sizeof(Signature) = 4+4+64 = 72
+typedef struct Signature {
+    uint32_t key_id;
+    enum Keytype type;
+    uint8_t sig[64];
+} Signature_t;
+
+typedef struct Hash {
+    enum HashType hash_type;
+    uint8_t hash[64];
+} Hash_t
+
+typedef struct Role {
+    enum RoleType type;
+    uint32_t key_id;
+    uint8_t threshold;
+} Role_t;
+
+#pragma pack(pop)
+
+typedef struct TufClient {
+    RootRequest_t root; 
+    TimeStampRequest_t timestamp;
+    SnapshotRequest_t snapshot;
+    TargetRequest_t targets;
+} TufClient_t;
+
+
+#endif /* _METADATA_H_ */

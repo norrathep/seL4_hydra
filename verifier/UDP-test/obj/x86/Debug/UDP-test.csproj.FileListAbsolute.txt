@@ -1,0 +1,7 @@
+C:\Users\norrathep\Documents\GitHub\sel4_verifier\UDP-test\obj\x86\Debug\UDP-test.exe
+C:\Users\norrathep\Documents\GitHub\sel4_verifier\UDP-test\bin\Debug\UDP-test.exe
+C:\Users\norrathep\Documents\GitHub\sel4_verifier\UDP-test\bin\Debug\UDP-test.pdb
+C:\Users\norrathep\Documents\GitHub\sel4_verifier\UDP-test\obj\x86\Debug\UDP-test.csprojResolveAssemblyReference.cache
+C:\Users\norrathep\Documents\GitHub\sel4_verifier\UDP-test\obj\x86\Debug\UDP-test.pdb
+C:\Users\norrathep\Documents\GitHub\sel4_verifier\UDP-test\bin\Debug\Chaos.NaCl.dll
+C:\Users\norrathep\Documents\GitHub\sel4_verifier\UDP-test\bin\Debug\Chaos.NaCl.pdb

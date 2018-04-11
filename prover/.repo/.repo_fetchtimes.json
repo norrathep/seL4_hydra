@@ -1,0 +1,22 @@
+{
+  "elfloader-tool.git": 1.4064018726348877, 
+  "libsel4utils.git": 1.0256648063659668, 
+  "libelf.git": 2.7291150093078613, 
+  "libcpio.git": 2.96966290473938, 
+  "libsel4allocman.git": 1.3536498546600342, 
+  "libsel4simple-default.git": 2.942457914352417, 
+  "sel4-tutorials-manifest.git": 0.7074689865112305, 
+  "seL4.git": 8.663790941238403, 
+  "common-tool.git": 3.637971878051758, 
+  "kbuild-tool.git": 4.838284969329834, 
+  "libsel4simple.git": 3.4469268321990967, 
+  "sel4-tutorials.git": 1.5973191261291504, 
+  "libsel4vka.git": 3.623394012451172, 
+  "libsel4platsupport.git": 1.8352899551391602, 
+  "libutils.git": 2.4700188636779785, 
+  "libsel4simple-stable.git": 0.46743297576904297, 
+  "libplatsupport.git": 3.0987730026245117, 
+  "libsel4muslcsys.git": 2.637216091156006, 
+  "libsel4vspace.git": 0.5442249774932861, 
+  "musllibc.git": 15.034017086029053
+}

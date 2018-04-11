@@ -1,0 +1,17 @@
+{
+  "core.repositoryformatversion": [
+    "0"
+  ], 
+  "remote.current.projectname": [
+    "sel4-tutorials.git"
+  ], 
+  "core.filemode": [
+    "true"
+  ], 
+  "remote.current.url": [
+    "https://github.com/sel4-projects/sel4-tutorials.git"
+  ], 
+  "remote.current.fetch": [
+    "+refs/heads/*:refs/remotes/current/*"
+  ]
+}

@@ -1,0 +1,34 @@
+﻿  main.cpp
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\blake2s-ref.c(297): warning C4244: 'argument': conversion from 'uint64_t' to 'size_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\blake2s-ref.c(298): warning C4244: '+=': conversion from 'uint64_t' to 'size_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(20): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fixedint.h(69): warning C4005: 'UINT64_C': macro redefinition
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\stdint.h(125): note: see previous definition of 'UINT64_C'
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fixedint.h(70): warning C4005: 'INT64_C': macro redefinition
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\stdint.h(120): note: see previous definition of 'INT64_C'
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fe.c(823): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fe.c(824): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fe.c(825): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fe.c(826): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fe.c(827): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fe.c(828): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fe.c(829): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fe.c(830): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fe.c(831): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\libs\src\libed25519\fe.c(832): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(37): warning C4101: 'i': unreferenced local variable
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(107): warning C4129: '=': unrecognized character escape sequence
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(108): warning C4129: ' ': unrecognized character escape sequence
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(109): warning C4129: ' ': unrecognized character escape sequence
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(110): warning C4129: ' ': unrecognized character escape sequence
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(111): warning C4129: ' ': unrecognized character escape sequence
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(112): warning C4129: ' ': unrecognized character escape sequence
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(113): warning C4129: ' ': unrecognized character escape sequence
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(114): warning C4129: ' ': unrecognized character escape sequence
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(115): warning C4129: ' ': unrecognized character escape sequence
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(116): warning C4129: '_': unrecognized character escape sequence
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(357): warning C4244: '=': conversion from 'std::streamsize' to 'uint32_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(359): warning C4244: 'argument': conversion from 'std::streamsize' to 'size_t', possible loss of data
+c:\users\norrathep\documents\github\sel4_verifier\windows_verifier\windows_verifier\main.cpp(370): warning C4244: '=': conversion from 'std::streamsize' to 'uint32_t', possible loss of data
+  windows_verifier.vcxproj -> C:\Users\norrathep\Documents\GitHub\sel4_verifier\windows_verifier\Debug\windows_verifier.exe
+  windows_verifier.vcxproj -> C:\Users\norrathep\Documents\GitHub\sel4_verifier\windows_verifier\Debug\windows_verifier.pdb (Partial PDB)

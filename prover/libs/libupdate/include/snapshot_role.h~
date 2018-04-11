@@ -1,0 +1,29 @@
+#ifndef _SNAPSHOT_ROLE_H_
+#define _SNAPSHOT_ROLE_H_
+
+#include <metadata.h>
+
+
+#pragma pack(push, 1)
+// https://github.com/theupdateframework/tuf/blob/develop/tests/repository_data/repository/metadata/snapshot.json
+typedef struct SnapshotMeta {
+    char name[MAX_NAME_SIZE];
+    uint8_t version;
+} SnapshotMeta_t
+
+typedef struct Snapshot {
+    Signature_t signature[NUM_SNAPSHOT_SIGS];
+    enum RoleType role_type;
+    uint64_t timestamp;
+    SnapshotMeta_t meta[1+1+NUM_TARGETS]; // root, targets, app1, app2, ...
+    uint32_t version;
+} Snapshot_t;
+#pragma pack(pop)
+
+int verify_snapshot(Snapshot_t sh) {
+
+    void *data = (void*)(&sh.role_type);
+    
+}
+
+#endif

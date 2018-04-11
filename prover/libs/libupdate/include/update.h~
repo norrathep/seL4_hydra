@@ -1,0 +1,49 @@
+#ifndef _UPDATE_H_
+#define _UPDATE_H_
+
+#include <inttypes.h>
+#include <string.h>
+#include <stdlib.h>
+#include <metadata.h> 
+#include <stdio.h>
+#include <crypto-ed25519/libed25519/ed25519.h>
+
+typedef  struct update_req {
+    uint8_t mac[32];
+    uint32_t start_disk_addr;
+    uint32_t start_cpio_addr;
+    uint32_t version;
+    uint32_t file_size;
+    uint32_t process_id;
+    uint8_t hash[64];
+    uint8_t signature[64];
+    uint8_t public_key[32];
+
+} update_req_t;
+
+typedef struct update_progress {
+    uint32_t current_offset;
+    uint32_t current_packet;
+    update_req_t request;
+} update_progress_t;
+
+typedef struct image_download {
+    uint32_t current_offset;
+    uint32_t len;
+    uint8_t complete;
+    uint8_t *img;
+} image_download_t;
+
+typedef struct download_state {
+    image_download_t fuel;
+    image_download_t speed;
+} download_state_t;
+
+void print_update_request(update_req_t r);
+
+int verify_sig(Signature_t sig, Key_t key, const unsigned char* data, size_t len);
+
+RootRequest_t* generate_default_root_role();
+
+
+#endif /* _UPDATE_H_ */

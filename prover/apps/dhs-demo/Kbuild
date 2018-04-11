@@ -1,0 +1,35 @@
+#
+# Copyright 2015, NICTA
+#
+# This software may be distributed and modified according to the terms of
+# the BSD 2-Clause license. Note that NO WARRANTY is provided.
+# See "LICENSE_BSD2.txt" for details.
+#
+# @TAG(NICTA_BSD)
+#
+
+apps-$(CONFIG_APP_DHS_DEMO) += dhs-demo
+
+# list of libraries the app needs to build
+dhs-demo-y = common libsel4 libmuslc libsel4bench \
+            libsel4muslcsys \
+            libsel4simple libsel4vka libsel4allocman libsel4vspace \
+    	    libsel4platsupport \
+            libsel4utils \
+            libcpio libelf libcrypto libattest liblwip \
+            libethdrivers libplatsupport libsdhcdrivers libupdate libtmf
+
+# set up correct simple lib for our kernel
+ifdef CONFIG_KERNEL_STABLE
+dhs-demo-$(CONFIG_LIB_SEL4_SIMPLE_STABLE) += libsel4simple-stable
+else
+dhs-demo-$(CONFIG_LIB_SEL4_SIMPLE_DEFAULT) += libsel4simple-default
+endif
+
+# add the companion app as a component so that we can elf load it
+dhs-demo-components-y += speedometer-app
+dhs-demo-components-y += fuel-level-app
+dhs-demo-components = $(addprefix $(STAGE_BASE)/bin/, $(dhs-demo-components-y))
+
+dhs-demo: export COMPONENTS=${dhs-demo-components}
+dhs-demo: ${dhs-demo-components-y} kernel_elf $(dhs-demo-y)

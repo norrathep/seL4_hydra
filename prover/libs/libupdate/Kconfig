@@ -1,0 +1,8 @@
+config LIB_UPDATE
+    bool "library for software update"
+    default y
+    depends on HAVE_LIBC && LIB_CRYPTO
+    help
+        Build software update lib.
+
+
