@@ -25,8 +25,8 @@ To compile:
 
 To run on SabreLite:
 Assume (i) micro-sd is inserted at /dev/sdX and (ii) the SabreLite board is configured to be able to run seL4 executable (if not, visit: https://sel4.systems/Info/Hardware/sabreLite/)
-1) dd if=fuel-level-app of=/dev/sdg bs=512 seek=2048
-2) dd if=speedometer-app of=/dev/sdg bs=512 seek=4096
+1) dd if=fuel-level-app of=/dev/sdX bs=512 seek=2048
+2) dd if=speedometer-app of=/dev/sdX bs=512 seek=4096
 3) Manually copy 'dhs-demo-image-arm-imx6' into micro-sd and insert micro-sd back to the SabreLite board
 4) Try to boot I.MX6-SabreLite, interrupt using the spacebar, then type the following commands:
 4.1) mmc dev 1
