@@ -14,7 +14,7 @@ HYDRA is published at WiSec'17. If you plan to use any part of our HYDRA code, p
 ```
 
 
-# Prover: (in /prover folder)
+# Prover
 
 ## SW-UPDATE:
 
@@ -34,15 +34,13 @@ Assume (i) micro-sd is inserted at /dev/sdX and (ii) the SabreLite board is conf
 2) `dd if=speedometer-app of=/dev/sdX bs=512 seek=4096`
 
 3) Manually copy 'dhs-demo-image-arm-imx6' into micro-sd and insert micro-sd back to the SabreLite board
-4) Try to boot I.MX6-SabreLite, interrupt using the spacebar, then type the following commands:
+4) Try to boot I.MX6-SabreLite with ethernet cable attached, interrupt using the spacebar, then type the following commands:
 
-4.1) `mmc dev 1`
-
-4.2) `fatload mmc 1 ${loadaddr} dhs-demo-image-arm-imx6`
-
-4.3) `bootelf ${loadaddr}`
-
-4.4) connect ethernet cable with verifier
+```
+mmc dev 1
+fatload mmc 1 ${loadaddr} dhs-demo-image-arm-imx6
+bootelf ${loadaddr}
+```
 
 WARNING: In my case, it seems like the MMC driver does not work properly, so I have to load the executable to RAM from dev 0 slot (an SD slot).
 
@@ -64,15 +62,15 @@ To run on SabreLite:
 1) Manually copy 'hydra-image-arm-imx6' into micro-sd and insert micro-sd back to the SabreLite board
 2) Try to boot I.MX6-SabreLite, interrupt using the spacebar, then type the following commands:
 
-2.1) `mmc dev 1`
+```
+mmc dev 1
+fatload mmc 1 ${loadaddr} hydra-image-arm-imx6
+bootelf ${loadaddr}
+```
 
-2.2) `fatload mmc 1 ${loadaddr} hydra-image-arm-imx6`
-
-2.3) `bootelf ${loadaddr}`
 
 
-
-# VERIFIER(for both SW-UPDATE and HYDRA): In verifier folder
+# Verifier
 
 The verifier requires Visual Studio 2015 on Windows 10.
 
