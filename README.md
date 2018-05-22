@@ -13,7 +13,6 @@ HYDRA is published at WiSec'17. If you plan to use any part of our HYDRA code, p
 }
 ```
 
-
 # Prover
 
 ## SW-UPDATE:
@@ -77,3 +76,5 @@ The verifier requires Visual Studio 2015 on Windows 10.
 1) Configure ethernet IP of the verifier machine to 192.168.168.1
 2) Run both UDP-test and windows_verifier projects, follow its instructions
 
+# License
+GPLv2 see `LICENSE` for more details.
