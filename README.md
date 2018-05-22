@@ -43,8 +43,10 @@ Assume (i) micro-sd is inserted at /dev/sdX and (ii) the SabreLite board is conf
 4.3) `bootelf ${loadaddr}`
 
 4.4) connect ethernet cable with verifier
+
 WARNING: In my case, it seems like the MMC driver does not work properly, so I have to load the executable to RAM from dev 0 slot (an SD slot).
-So the first two steps change to: 4.1) mmc dev 0, 4.2) fatload mmc 0 ${loadaddr} dhs-demo-image-arm-imx6
+
+So the first two steps change to: 4.1) `mmc dev 0`, 4.2) `fatload mmc 0 ${loadaddr} dhs-demo-image-arm-imx6`
 Then switch the micro-sd card to dev 1 slot and run 4.3)
 
 
