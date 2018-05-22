@@ -52,7 +52,7 @@ Then switch the micro-sd card to dev 1 slot and run 4.3)
 
 To compile:
 ```
-cp configs/hydra-attest-image-imx6
+cp configs/hydra-attest-image-imx6 .config
 make clean
 make
 ```
