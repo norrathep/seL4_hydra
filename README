@@ -1,7 +1,8 @@
 This project requires two entities: prover and verifier. Prover is I.MX6-SabreLite while verifier is a powerful Windows machine.
 
-HYDRA is published at WiSec'17. If you plan to use any part of our code, please consider citing:
+HYDRA is published at WiSec'17. If you plan to use any part of our HYDRA code, please consider citing:
 
+```
 @inproceedings{eldefrawy2017hydra,
   title={HYDRA: hybrid design for remote attestation (using a formally verified microkernel)},
   author={Eldefrawy, Karim and Rattanavipanon, Norrathep and Tsudik, Gene},
@@ -10,11 +11,12 @@ HYDRA is published at WiSec'17. If you plan to use any part of our code, please 
   year={2017},
   organization={ACM}
 }
+```
 
 
-PROVER: In prover folder
+# PROVER: In prover folder
 
-SW-UPDATE:
+## SW-UPDATE:
 
 To compile:
 
@@ -39,7 +41,7 @@ Then switch the micro-sd card to dev 1 slot and run 4.3)
 
 
 
-ATTESTATION (HYDRA):
+## ATTESTATION (HYDRA):
 
 To compile:
 1) cp configs/hydra-attest-image-imx6
@@ -55,7 +57,7 @@ To run on SabreLite:
 
 
 
-VERIFIER(for both SW-UPDATE and HYDRA): In verifier folder
+# VERIFIER(for both SW-UPDATE and HYDRA): In verifier folder
 
 The verifier requires Visual Studio 2015 on Windows 10.
 
