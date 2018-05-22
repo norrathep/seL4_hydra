@@ -75,7 +75,7 @@ bootelf ${loadaddr}
 The verifier requires Visual Studio 2015 on Windows 10.
 
 1) Configure ethernet IP of the verifier machine to 192.168.168.1
-2) Run both UDP-test and windows_verifier projects, follow its instructions
+2) Run both UDP-test and windows_verifier projects, follow their instructions
 
 # License
 GPLv2 see `LICENSE` for more details.
