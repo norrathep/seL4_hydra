@@ -14,16 +14,18 @@ HYDRA is published at WiSec'17. If you plan to use any part of our HYDRA code, p
 ```
 
 
-# PROVER: In prover folder
+# Prover: (in /prover folder)
 
 ## SW-UPDATE:
 
 To compile:
 
-1) cp configs/sw-update-image-imx6 .config
-2) make clean && make
-3) cd sel4-stripimage
-4) make run
+```
+cp configs/sw-update-image-imx6 .config
+make clean && make
+cd sel4-stripimage
+make run
+```
 
 To run on SabreLite:
 Assume (i) micro-sd is inserted at /dev/sdX and (ii) the SabreLite board is configured to be able to run seL4 executable (if not, visit: https://sel4.systems/Info/Hardware/sabreLite/)
