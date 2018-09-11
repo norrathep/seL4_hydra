@@ -26,6 +26,7 @@ menu "seL4 Applications"
     source "apps/fuel-level-app/Kconfig"
     source "apps/hydra/Kconfig"
     source "apps/hydra-app/Kconfig"
+    source "apps/update-benchmark/Kconfig"
 endmenu
 
 menu "seL4 Libraries"
